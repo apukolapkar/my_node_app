@@ -11,9 +11,7 @@ node{
 		sh'printenv'
 		}
 		stage('Deploy Environment'){
-			if(env.BRANCH_NAME=="development"){
 				sh'sudo /usr/bin/docker-compose up --build -d &'
-			}
 			
 		}
 		
