@@ -7,6 +7,6 @@ RUN npm install is-in-docker
 
 WORKDIR /node_server
 
-EXPOSE 3000
+EXPOSE 4000
 
 CMD ["node", "index.js"]
