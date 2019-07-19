@@ -11,7 +11,7 @@ node{
 		sh'printenv'
 		}
 		stage('Deploy Environment'){
-				sh'sudo /usr/bin/docker-compose up --build -d &'
+			sh'sudo /usr/bin/docker-compose up --build -d &'
 			
 		}
 		
