@@ -3,11 +3,17 @@ node{
 		stage('Checkout'){
 			checkout scm
 		}
-		stage('Environment'){
+		stage('Check Environment'){
 		sh'git --version'
 		echo "Branch:${env.BRANCH_NAME}"
 		sh'docker -v'
 		sh'printenv'
+		}
+		stage('Deploy Environment'){
+			if(env.BRANCH_NAME=="development"){
+				sh'sudo docker-compose up --build'
+			}
+			
 		}
 		
 	}
