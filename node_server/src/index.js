@@ -3,11 +3,11 @@ const app = express()
 
 app.get('/', (req, res) =>  { 
     
-    console.log('I just received a GET request on port 4000!')
+    console.log('I just received a GET request on port 5051!')
     res.send('Hello World! from Prod environment');
 })
 
-app.listen(4000, () => console.log('I just connected on port 4000!'))
+app.listen(5051, () => console.log('I just connected on port 5051!'))
 
 
 getDockerHost = require('get-docker-host');
