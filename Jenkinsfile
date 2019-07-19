@@ -11,7 +11,7 @@ node{
 		}
 		stage('Deploy Environment'){
 			if(env.BRANCH_NAME=="development"){
-				sh'sudo docker-compose up --build'
+				sh'docker-compose up --build'
 			}
 			
 		}
