@@ -14,7 +14,7 @@ services:
         - './node_server/src:/node_server'  
   node_app3:
       build: ./node_server
-      container_name: DEV_nodejs_server2
+      container_name: DEV_nodejs_server3
       tty: true
       volumes:
         - './node_server/src:/node_server'  
