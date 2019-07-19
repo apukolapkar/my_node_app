@@ -4,7 +4,7 @@ const app = express()
 app.get('/', (req, res) =>  { 
     
     console.log('I just received a GET request on port 3000!')
-    res.send('Hello World!');
+    res.send('Hello World! from Dev environment');
 })
 
 app.listen(3000, () => console.log('I just connected on port 3000!'))
