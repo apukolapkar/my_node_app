@@ -7,6 +7,7 @@ node{
 		sh'git --version'
 		echo "Branch:${env.BRANCH_NAME}"
 		sh'docker -v'
+		sh'docker-compose version'
 		sh'printenv'
 		}
 		stage('Deploy Environment'){
