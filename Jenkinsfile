@@ -8,6 +8,7 @@ node{
 		echo "Branch:${env.BRANCH_NAME}"
 		sh'docker -v'
 		sh'docker-compose version'
+                sh'docker-compose up --build'
 		sh'printenv'
 		}
 		stage('Deploy Environment'){
