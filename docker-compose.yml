@@ -2,21 +2,25 @@ version: '2'
 services:
   node_app1:
       build: ./node_server
+      container_name: DEV_nodejs_server1
       tty: true
       volumes:
         - './node_server/src:/node_server'  
   node_app2:
       build: ./node_server
+      container_name: DEV_nodejs_server2
       tty: true
       volumes:
         - './node_server/src:/node_server'  
   node_app3:
       build: ./node_server
+      container_name: DEV_nodejs_server2
       tty: true
       volumes:
         - './node_server/src:/node_server'  
   loadbalancer:
       build: ./nginx_loadbalancer
+      container_name: DEV_nginx_loadbalancer
       tty: true
       links:
           - node_app1
