@@ -1,0 +1,28 @@
+version: '3.2'
+services:
+  node_app1:
+      build: ./node_server
+      tty: true
+      volumes:
+        - './node_server/src:/node_server'  
+  node_app2:
+      build: ./node_server
+      tty: true
+      volumes:
+        - './node_server/src:/node_server'  
+  node_app3:
+      build: ./node_server
+      tty: true
+      volumes:
+        - './node_server/src:/node_server'  
+  loadbalancer:
+      build: ./nginx_loadbalancer
+      tty: true
+      links:
+          - node_app1
+          - node_app2
+          - node_app3
+      ports:
+          - '8081:8081'
+volumes:
+  node_server:
