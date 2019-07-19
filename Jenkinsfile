@@ -12,7 +12,6 @@ node{
 		}
 		stage('Deploy Environment'){
 			if(env.BRANCH_NAME=="development"){
-				#"DOCKER_HOST=tcp://127.0.0.1:2376"
 				sh'docker-compose up --build'
 			}
 			
