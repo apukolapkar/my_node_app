@@ -1,4 +1,4 @@
-version: '3.2'
+version: '2'
 services:
   node_app1:
       build: ./node_server
